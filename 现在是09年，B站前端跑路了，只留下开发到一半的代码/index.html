@@ -536,6 +536,91 @@
       </div>
     </div>
   </header>
+  <!-- 中间导航栏 -->
+  <nav class="nav">
+    <!-- 左侧入口 -->
+    <div class="nav_left">
+      <a>
+        <img class="nav_left_updates" src="./public/nav_left_updates_avatar.webp">
+        <div class="nav_left_title">动态</div>
+      </a>
+      <a>
+        <div class="nav_left_hot">
+          <img src="./public/nav_left_hot.svg">
+        </div>
+        <div class="nav_left_title">热门</div>
+      </a>
+      <a>
+        <div class="nav_left_channel">
+          <img src="./public/nav_left_channel.svg">
+        </div>
+        <div class="nav_left_title">频道</div>
+      </a>
+    </div>
+    <!-- 中侧分类 -->
+    <div class="nav_center">
+      <a class="nav_center_item">番 剧</a>
+      <a class="nav_center_item">国 创</a>
+      <a class="nav_center_item">综 艺</a>
+      <a class="nav_center_item">动 画</a>
+      <a class="nav_center_item">鬼 畜</a>
+      <a class="nav_center_item">舞 蹈</a>
+      <a class="nav_center_item">娱 乐</a>
+      <a class="nav_center_item">科 技</a></a>
+      <a class="nav_center_item">美 食</a>
+      <a class="nav_center_item">汽 车</a>
+      <a class="nav_center_item">运 动</a>
+      <a class="nav_center_item">电 影</a>
+      <a class="nav_center_item">电视剧</a>
+      <a class="nav_center_item">纪录片</a>
+      <a class="nav_center_item">游 戏</a>
+      <a class="nav_center_item">音 乐</a>
+      <a class="nav_center_item">影 视</a>
+      <a class="nav_center_item">知 识</a>
+      <a class="nav_center_item">资 讯</a></a>
+      <a class="nav_center_item">生 活</a>
+      <a class="nav_center_item">时 尚</a>
+      <a class="nav_center_item">更 多</a>
+    </div>
+
+    <!-- 右侧大分类 -->
+    <div class="nav_right">
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon1.svg">
+        <span class="nav_right_title">专 栏</span>
+      </a>
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon2.svg">
+        <span class="nav_right_title">活 动</span>
+      </a>
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon3.svg">
+        <span class="nav_right_title">社区中心</span>
+      </a>
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon4.svg">
+        <span class="nav_right_title">直 播</span>
+      </a>
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon5.svg">
+        <span class="nav_right_title">课 堂</span>
+      </a>
+      <a class="nav_right_item">
+        <img class="nav_right_icon" src="./public/nav_right_icon6.svg">
+        <span class="nav_right_title">新歌热榜</span>
+      </a>
+    </div>
+  </nav>
+  <!-- 主要内容区 -->
+  <main class="main">
+    <!-- main_carousel_space 是轮播图所占4块gird的空间，-->
+    <div class="main_carousel_space">
+      <!-- 在这片空间中，高度对齐到第二行封面的底端 -->
+      <div class="main_carousel_AlignToTheBottomOfTheSecondCover" id="myCarouselContainer">
+      </div>
+    </div>
+    <!-- 后续视频卡片就不显示了，用JS生成视频卡片 -->
+  </main>
 </body>
 
 <script>
@@ -635,6 +720,30 @@
 
     })
   });
+
+  //生成视频卡片骨架
+  let main = document.querySelector('.main');
+  let item_num = 20;
+  for (let i = 0; i < item_num; ++i) {
+    main.innerHTML +=
+      `
+      <div class="vedio_card_skeleton">
+        <div class="vedio_card_skeleton_cover_wrapper">
+          <a class="vedio_card_skeleton_cover" href="https://www.bilibili.com/">
+            <img src="">
+          </a>
+        </div>
+        <div class="vedio_card_skeleton_title"></div>
+        <div class="vedio_card_skeleton_title_short"></div>
+        <div class="vedio_card_skeleton_name"></div>
+      </div>
+      `
+  }
+
 </script>
 <script src="./script/用JS实现数据插入html.js"></script>
+<!-- 引入轮播图JS、CSS -->
+<link rel="stylesheet" href="./css/carousel.css">
+<script src="./script/MyCarouselComponent.js"> </script>
+
 </html>

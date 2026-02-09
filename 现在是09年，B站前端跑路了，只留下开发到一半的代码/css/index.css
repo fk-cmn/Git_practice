@@ -1027,6 +1027,135 @@ button {
   margin-right: 4px;
 }
 
+/* ===============导航区==================== */
+.nav {
+  min-width: 1080px;
+  display: flex;
+  padding: 20px 140px;
+}
+
+.nav_left {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav_left_updates {
+  display: block;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  object-fit: contain;
+  outline: 1px solid #e3e5e7;
+}
+
+.nav_left_hot {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  background-color: #F07775;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_left_channel {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  background-color: #59CA73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_left_title {
+  margin-top: 6px;
+  color: #18191C;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav_center {
+  flex: 1;
+  margin-left: 10px;
+  padding-right: 30px;
+  border-right: #e3e5e7 1px solid;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.nav_center_item {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 14px;
+  color: #61666D;
+  border-radius: 6px;
+  background-color: #F6F7F8;
+  transition: background-color .3s ease;
+}
+
+.nav_center_item:hover {
+  background-color: #e3e5e7;
+}
+
+.nav_right {
+  width: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 10px;
+  justify-items: center;
+}
+
+.nav_right_item {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_right_icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  /* 改变svg颜色 */
+  filter: invert(0.5);
+}
+
+.nav_right_title {
+  margin-left: 4px;
+  font-size: 13px;
+  color: #61666D;
+}
+
+/* ===============内容==================== */
+.main {
+  min-width: 1080px;
+  padding: 0 140px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+/* ===============内容区轮播图==================== */
+.main_carousel_space {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  /* background-color: #e3e5e7; */
+}
+
+.main_carousel_AlignToTheBottomOfTheSecondCover {
+  height: 0;
+  padding-top: calc((100% - 20px) / 2 * 0.5625 * 2 + 95px);
+  /* background-color: #59CA73; */
+  position: relative;
+}
+
 /* ===============视频卡片==================== */
 .vedio_card_skeleton:nth-child(n+8) {
   grid-row: span 2;
